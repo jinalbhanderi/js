@@ -1,0 +1,90 @@
+
+1.what is the difference between java & javascript?
+	
+	Java
+   1.  Java is an OOP programming language.
+   2.  It creates applications that run in a virtual machine or browser.
+   3.  Java code needs to be compiled.
+
+
+	JavaScript
+   1.  JavaScript is an OOP scripting language.
+   2. The code is run on a browser only.
+   3. JavaScript code are all in the form of text.
+
+
+2. What is Javascript?
+
+	JavaScript is a lightweight, interpreted programming language with object-oriented capabilities that 
+    allows you to build interactivity into otherwise static HTML pages. The general-purpose core of the 
+    language has been embedded in Netscape, Internet Explorer, and other web browsers.
+
+
+3.What are the data types supported by javascript?
+
+    	* The data types supported by JavaScript are:
+
+            A.Undefined 
+            C.Boolean
+            D.String
+            E.Symbol
+            B.Null
+            F.Number
+            G.Object
+
+  4.What are the scopes of a variable in javascript?
+
+	The scope of a variable is the region of your program in which it is defined. JavaScript variable will have only two scopes.
+
+    1. Global Variables - A global variable has global scope which means it is visible everywhere in your JavaScript code.
+    2. Local Variables - A local variable will be visible only within a function where it is defined. Function parameters are always local to that function.
+
+5.What is callback?
+
+	A callback is a plain JavaScript function passed to some method as an argument or option. 
+    It is a function that is to be executed after another function has finished executing, hence the name "call back". 
+    In JavaScript, functions are objects. Because of this, functions can take functions as arguments, and can be returned by other functions
+
+6.What is Closure?Give an example.
+
+	Closures are created whenever a variable that is defined outside the current scope is accessed from within some inner scope.
+    It gives you access to an outer functions scope from an inner function. In JavaScript, closures are created every time a function is created. 
+    To use a closure, simply define a function inside another function and expose it.
+
+	    Clonsider the following code example:
+
+                           function makeFunc() {
+                           const name = 'Mozilla';
+                           function displayName() {
+                           console.log(name);
+                            }
+                           return displayName;
+                           }
+
+                          const myFunc = makeFunc();
+                          myFunc();
+
+7.What is the difference between the operators '==','==='?
+	The main difference between "==" and "===" operator is that formerly compares variable by making type correction 
+	e.g. if you compare a number with a string with numeric literal, == allows that, but === doesn't allow that,because it not only checks the value but also type of two variable, if two variables are not of the same type "===" return false,while "==" return true.
+
+
+8.What is the difference between null & undefined?
+
+	Undefined means a variable has been declared but has not yet been assigned a value. 
+	On the other hand, null is an assignment value. It can be assigned to a variable as a representation of no value. Also, undefined and null are two distinct types: undefined is a type itself (undefined) while null is an object.
+
+
+9.What would be the result of 2+5+"3"?
+	
+	Since 2 and 5 are integers, they will be added numerically. And since 3 is a string, its concatenation will be done. So the result would be 73. The " " makes all the difference here and represents 3 as a string and not a number.
+
+10.What is the difference between call & Apply?
+      
+	The call() method calls a function with a given this value and arguments provided individually.
+	Syntax-
+	1||fun.call(thisArg[, arg1[, arg2[, ...]]])
+	
+	The apply() method calls a function with a given this value, and arguments provided as an array.
+	Syntax-
+	1||fun.apply(thisArg, [argsArray])

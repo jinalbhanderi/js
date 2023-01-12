@@ -1,0 +1,93 @@
+ Module - 2: Node - NodeJS – Introduction
+
+
+Q1. What is Node.js? Where can you use it?
+
+  -Node.js is an open source server environment
+  -Node.js is free
+  -Node.js runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)
+  -Node.js uses JavaScript on the server
+  -Node.js is perfect for data-intensive applications as it uses an asynchronous, event-driven model.
+You can use  I/O intensive web applications like video streaming sites.You can also use it for developing: Real-time web applications, 
+Network applications, General-purpose applications, and Distributed systems.   
+
+
+Q2. Explain callback in Node.js.
+
+
+	-A callback function is called after a given task.
+      -It allows other code to be run in the meantime and prevents any blocking. 
+      -Being an asynchronous platform, Node.js heavily relies on callback.
+      -All APIs of Node are written to support callbacks.
+
+
+Q3. What are the advantages of using promises instead of callbacks?
+
+	1.The control flow of asynchronous logic is more specified and structured.
+	2.The coupling is low.
+	3.We've built-in error handling.
+	4.Improved readability.
+
+
+Q4. What is NPM?
+
+	-This is a packages manager used in the Node.js environment. 
+	-As a rule this software is installed on the user's PC together with other parts of Node.js.
+	-NPM stands for Node Package Manager, responsible for managing all the packages and modules for Node.js.
+
+	Node Package Manager provides two main functionalities:
+
+	1.Provides online repositories for node.js packages/modules, which are searchable on search.nodejs.org
+	2.Provides command-line utility to install Node.js packages and also manages Node.js versions and dependencies  
+
+
+Q5.What are the modules in Node.js?Explain
+
+	-Modules are like JavaScript libraries that can be used in a Node.js application to include a set of functions. 
+	To include a module in a Node.js application, use the require() function with the parentheses containing the module's name.
+
+-Node.js has many modules to provide the basic functionality needed for a web application. Some of them include:
+
+    Core Modules Name	 	                   Description 
+        fs			 To handle the file system.
+	http	            To make Node.js act as an HTTP server
+	https	            To make Node.js act as an HTTPS server.
+        os	             It provides information about the operation system.
+	path			To handle file paths.
+	cluster		To split a single Node process into multiple processes.
+	dns			To do DNS lookups and name resolution functions.
+	tls			To implement TLS and SSL protocols.
+	querystring		To handle URL query strings.
+	url			To parse URL strings.
+	events			To handle events
+	timers			To execute a function after a given number of milliseconds.
+
+
+Q6.Create TODO app using FS module with yargs(command line arguments).
+ 
+
+Installation:
+	npm i yargs
+
+
+	const yargs=require('yargs');
+	const name=["vaibhav","mathukiya"];
+
+	yargs.command({
+		command:'add',
+		describe:"Add a new name",
+		builder:{
+		          title:{
+			describe:"this is the title arg",
+			type:'string'
+		}
+	},
+	handler:function(argv){
+		name.push(argv.title);
+		console.log(notes);
+	}
+});
+console.log(yargs.argv);	
+
+
+
